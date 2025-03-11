@@ -1,8 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import RegisterForm from './RegisterForm';
-import Login from './Login';
-import ForgetPassword from './ForgetPassword';
-import AdminPanel from './adminpanel/AdminPanel';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RegisterForm from "./RegisterForm";
+import Login from "./Login";
+import ForgetPassword from "./ForgetPassword";
+import AdminPanel from "./adminpanel/AdminPanel";
+import AdminKitapEkleme from "./adminpanel/AdminKitapEkleme";
+
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgetPassword" element={<ForgetPassword />} />
-          <Route path="/Adminpanel" element={<AdminPanel/>}></Route>
+          <Route path="/adminpanel" element={<AdminPanel />} />
+          <Route path="/adminpanel/kitap-ekle" element={<AdminKitapEkleme />} />
+      
         </Routes>
       </div>
     </Router>

@@ -16,16 +16,16 @@ function AdminLogin() {
     onSubmit: async (values) => {
       setLoading(true);
       try {
-        // Admin login isteği
+     
         const response = await axios.post("/admin/login", values);
 
-        const { token } = response.data; // Token'ı API'den alıyoruz
-        localStorage.setItem('jwt_token', token); // Token'ı localStorage'a kaydediyoruz
+        const { token } = response.data; 
+        localStorage.setItem('jwt_token', token); 
 
         console.log("Admin giriş başarılı!", response.data);
 
-        // Başarılı giriş sonrası admin paneline yönlendirme
-        navigate('/admin/dashboard'); // Admin paneline yönlendir
+     
+        navigate('/admin/dashboard'); 
 
       } catch (error) {
         console.log("Giriş hatası:", error);

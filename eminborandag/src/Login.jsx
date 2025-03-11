@@ -62,7 +62,7 @@ function Login() {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.email && <div style={{ color: 'red' }}>{errors.email}</div>}
+          {touched.email && <div style={{ color: 'red' }}>{errors.email}</div>}
         </div>
 
         <div>
@@ -74,7 +74,7 @@ function Login() {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.password && <div style={{ color: 'red' }}>{errors.password}</div>}
+          {touched.password && <div style={{ color: 'red' }}>{errors.password}</div>}
         </div>
 
         <button type="submit" disabled={loading}>
